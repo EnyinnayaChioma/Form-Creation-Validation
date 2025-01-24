@@ -1,5 +1,5 @@
 // happen when html has loaded
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', function () {
   // call form
   const form = document.getElementById('registration-form');
   const feedbackDiv = document.getElementById('form-feedback')
