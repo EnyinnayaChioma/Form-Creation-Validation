@@ -18,13 +18,20 @@
    const userList = document.createElement('ul')
 
    users.forEach(user => {
-   let eachUser = document.createElement('li').textContent = user.name
+    // Create a <li> element.
+   let eachUser = document.createElement('li')
+   
+  //  Set the text content of the <li> to the user’s name
+   eachUser.textContent = user.name
 
-   eachUser.appendChild(userList)
+  //  Append the <li> to userList.
+   userList.appendChild(eachUser)
     
    });
 
-   userList.appendChild(dataContainer)
+
+  //  After the loop, append userList to dataContainer.
+   dataContainer.appendChild(userList)
    } catch (error) {
 
       dataContainer.innerHTML = ''
@@ -33,4 +40,4 @@
    }
 }
 
-document.addEventListener('DOMContentLoaded' , fetchUserData())
+document.addEventListener('DOMContentLoaded' , fetchUserData)
